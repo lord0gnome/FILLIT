@@ -6,7 +6,7 @@
 /*   By: guiricha <guiricha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/04 16:19:56 by guiricha          #+#    #+#             */
-/*   Updated: 2016/01/04 16:37:24 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/01/04 17:20:11 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	ft_print_tet_table(t_tetri **table)
 	size_t	index;
 
 	index = 0;
-	i = 0;
 	while (table[index])
 	{
 		i = 0;

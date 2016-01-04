@@ -6,7 +6,7 @@
 /*   By: guiricha <guiricha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/19 16:56:01 by guiricha          #+#    #+#             */
-/*   Updated: 2016/01/04 15:47:46 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/01/04 17:31:45 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ static void	ft_find_minxy(size_t *minx, size_t *miny, t_tetri *new)
 			*minx = (size_t)new->x[j];
 		if ((size_t)new->y[j] < *miny)
 			*miny = (size_t)new->y[j];
-		++j;
+		j++;
 	}
 }
 
-void	ft_set_xy(size_t *minx, size_t *miny, t_tetri *new)
+static void	ft_set_xy(size_t *minx, size_t *miny, t_tetri *new)
 {
 	int		j;
 
@@ -49,15 +49,15 @@ t_tetri		*ft_convert_list(char *str)
 	size_t	minx;
 	size_t	miny;
 	t_tetri	*new;
-	int		i;
+	size_t	i;
 	size_t	j;
 
 	j = 0;
-	i = -1;
+	i = 0;
 	minx = 0;
 	miny = 0;
 	new = (t_tetri *)malloc(sizeof(t_tetri));
-	while (str[++i])
+	while (str[i])
 	{
 		if (str[i] == '#')
 		{
@@ -65,21 +65,9 @@ t_tetri		*ft_convert_list(char *str)
 			new->y[j] = i / 5;
 			++j;
 		}
+		i++;
 	}
 	ft_find_minxy(&minx, &miny, new);
 	ft_set_xy(&minx, &miny, new);
 	return (new);
-}
-
-void	ft_print_tab(char **tab)
-{
-	int i;
-
-	i = 0;
-	while(tab[i])
-	{
-		ft_putstr(tab[i]);
-		ft_putstr("\n");
-		++i;
-	}
 }

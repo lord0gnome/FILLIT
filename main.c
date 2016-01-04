@@ -6,7 +6,7 @@
 /*   By: guiricha <guiricha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/04 15:20:59 by guiricha          #+#    #+#             */
-/*   Updated: 2016/01/04 16:32:54 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/01/04 17:35:04 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int	main(int argc, char **argv)
 		{
 			data = ft_data_init();
 			new = ft_list_to_table(&list);
-			ft_putnbr((int)ft_lstlen(&list));
 			ft_print_tet_table(new);
 			// TO DO, FIND ALGORITHM THAT WORKS HERE....
 			ft_putstr("it works until here!");
