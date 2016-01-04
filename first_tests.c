@@ -6,7 +6,7 @@
 /*   By: guiricha <guiricha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/04 15:51:27 by guiricha          #+#    #+#             */
-/*   Updated: 2016/01/04 15:52:35 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/01/04 17:41:03 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int		ft_char_is_ok(char *str)
 
 int		ft_check(t_list **begin_list)
 {
-	t_list *explorer;
-	char *str;
+	t_list	*explorer;
+	char	*str;
 
 	explorer = *begin_list;
 	while (explorer)
@@ -52,11 +52,11 @@ int		ft_check(t_list **begin_list)
 		str = explorer->content;
 		if (explorer->next != NULL &&
 				(str[4] != '\n' || str[9] != '\n' || str[14] != '\n'
-				 || str[19] != '\n' || str[20] != '\n'))
+				|| str[19] != '\n' || str[20] != '\n'))
 			return (0);
 		if (explorer->next == NULL &&
 				(str[4] != '\n' || str[9] != '\n' || str[14] != '\n'
-				 || str[19] != '\n'))
+				|| str[19] != '\n'))
 			return (0);
 		str = explorer->content;
 		if (!ft_check_form(str))
@@ -83,7 +83,6 @@ int		ft_final_check(int imin, int imax, int jmin, int jmax)
 			(jmax == jmin && (imax - imin == 3)))
 		return (1);
 	return (0);
-
 }
 
 int		ft_check_form(char *s)

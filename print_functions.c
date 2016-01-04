@@ -6,7 +6,7 @@
 /*   By: guiricha <guiricha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/04 16:19:56 by guiricha          #+#    #+#             */
-/*   Updated: 2016/01/04 17:20:11 by guiricha         ###   ########.fr       */
+/*   Updated: 2016/01/04 17:41:40 by guiricha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,13 @@ void	ft_print_tet_table(t_tetri **table)
 			i++;
 		}
 		ft_putchar('\n');
-		while(i < 8 && i >= 4)
+		while (i < 8 && i >= 4)
 		{
 			ft_putchar('|');
 			ft_putnbr(table[index]->y[i - 4]);
 			ft_putchar('|');
 			i++;
 		}
-		ft_putchar('\n');
-		ft_putchar('\n');
 		ft_putchar('\n');
 		index++;
 	}
